@@ -1,0 +1,14 @@
+C:\Users\Martin\Desktop\UxDesign\UxDesign.API\bin\Debug\netcoreapp2.1\UxDesign.API.deps.json
+C:\Users\Martin\Desktop\UxDesign\UxDesign.API\bin\Debug\netcoreapp2.1\UxDesign.API.runtimeconfig.json
+C:\Users\Martin\Desktop\UxDesign\UxDesign.API\bin\Debug\netcoreapp2.1\UxDesign.API.runtimeconfig.dev.json
+C:\Users\Martin\Desktop\UxDesign\UxDesign.API\bin\Debug\netcoreapp2.1\UxDesign.API.dll
+C:\Users\Martin\Desktop\UxDesign\UxDesign.API\bin\Debug\netcoreapp2.1\UxDesign.API.pdb
+C:\Users\Martin\Desktop\UxDesign\UxDesign.API\obj\Debug\netcoreapp2.1\UxDesign.API.csprojAssemblyReference.cache
+C:\Users\Martin\Desktop\UxDesign\UxDesign.API\obj\Debug\netcoreapp2.1\UxDesign.API.csproj.CoreCompileInputs.cache
+C:\Users\Martin\Desktop\UxDesign\UxDesign.API\obj\Debug\netcoreapp2.1\UxDesign.API.RazorAssemblyInfo.cache
+C:\Users\Martin\Desktop\UxDesign\UxDesign.API\obj\Debug\netcoreapp2.1\UxDesign.API.RazorAssemblyInfo.cs
+C:\Users\Martin\Desktop\UxDesign\UxDesign.API\obj\Debug\netcoreapp2.1\UxDesign.API.AssemblyInfoInputs.cache
+C:\Users\Martin\Desktop\UxDesign\UxDesign.API\obj\Debug\netcoreapp2.1\UxDesign.API.AssemblyInfo.cs
+C:\Users\Martin\Desktop\UxDesign\UxDesign.API\obj\Debug\netcoreapp2.1\UxDesign.API.RazorTargetAssemblyInfo.cache
+C:\Users\Martin\Desktop\UxDesign\UxDesign.API\obj\Debug\netcoreapp2.1\UxDesign.API.dll
+C:\Users\Martin\Desktop\UxDesign\UxDesign.API\obj\Debug\netcoreapp2.1\UxDesign.API.pdb
