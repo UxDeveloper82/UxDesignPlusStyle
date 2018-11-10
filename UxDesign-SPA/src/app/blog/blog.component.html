@@ -7,16 +7,16 @@
               <br><small>Blogs for 2017</small>
             </h1>
               <!-- Blog Post -->
-              <div class="card mb-4">
-                  <img class="img-responsive" src="assets/images/Angular-Frameworks.png" alt="Card image cap">
+              <div class="card mb-4" *ngFor="let blog of blogs">
+                  <img class="img-responsive" src="assets/images/{{blog.image}}.png" alt="Card image cap">
                   <div class="card-body">
-                        <h2 class="card-title">websites</h2>
-                        <p class="card-text">test1</p>
+                        <h2 class="card-title">{{blog.title}}</h2>
+                        <p class="card-text">{{blog.post}}</p>
                         <a href="#" class="btn btn-primary">Read More &rarr;</a>
                   </div>
                   <div class="card-footer text-muted">
-                      Posted on 2018-02-11 20:59:54 by
-                      <a href="#">Martin Fernandez</a>
+                      Posted on {{blog.created}} by
+                      <a href="#">{{blog.author}}</a>
                   </div>
               </div>    
           <!-- Pagination -->

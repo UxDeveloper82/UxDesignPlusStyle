@@ -14,6 +14,7 @@ import { appRoutes } from './routes';
 import { BlogComponent } from './blog/blog.component';
 import { RegisterComponent } from './register/register.component';
 import { ValueComponent } from './value/value.component';
+import { AuthService } from './_services/auth.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,9 @@ import { ValueComponent } from './value/value.component';
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

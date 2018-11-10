@@ -11,14 +11,17 @@ namespace UxDesign.API.Controllers
     [Authorize]
     [Route ("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase {
+    public class ValuesController : ControllerBase
+    {
         private readonly DataContext _context;
+        
         public ValuesController (DataContext context) 
         {
             _context = context;
 
         }
         // GET api/values
+        [AllowAnonymous]
         [HttpGet]
         public IActionResult GetValues () 
         {

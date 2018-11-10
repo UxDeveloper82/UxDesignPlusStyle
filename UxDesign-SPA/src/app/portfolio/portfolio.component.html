@@ -1,3 +1,29 @@
-<p>
-  portfolio works!
-</p>
+<section id="main-gallery">
+	     <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">MY LATEST WORKS</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+	    <div class="container text-center">
+			    <div class="row">
+				    
+				        <div class="col-md-4 outside-box" *ngFor="let portfolio of portfolios">
+								<div class="inside-box">					  
+									 <img class="img-thumbnail" src="assets/images/{{portfolio.image}}.png" alt="ultimate-website">
+									 <div class="overlay">
+										  <div class="text">{{portfolio.mainTitle}}</div>
+									 </div>
+								</div>
+								<div class="content">
+									  <h3>{{portfolio.title}}</h3>
+									  <p>{{portfolio.description}}</p>
+									  <a href="<?= $products['link'];?>" class="btn btn-primary btn-outline">More Info</a>
+								</div>	 
+						</div>					
+						
+            </div>
+		</div>      
+</section>

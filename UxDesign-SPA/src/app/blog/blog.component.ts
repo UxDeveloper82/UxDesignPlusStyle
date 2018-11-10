@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-blog',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
+  blogs: any;
 
-  constructor() { }
+  constructor(private Http: HttpClient) { }
 
   ngOnInit() {
+    this.getBlogs();
+  }
+
+  getBlogs() {
+    this.Http.get('http://localhost:5000/api/blogs')
+       .subscribe(response => {
+          this.blogs = response;
+       }, error => {
+         console.log(error);
+       });
   }
 
 }

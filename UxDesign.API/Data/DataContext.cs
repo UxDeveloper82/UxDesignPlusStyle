@@ -10,5 +10,10 @@ namespace UxDesign.API.Data
         public DbSet<Value> Values { get; set;}
 
         public DbSet<User> Users { get; set; }
+
+         public DbSet<Portfolio> Portfolios { get; set; }
+
+         public DbSet<Blog> Blogs { get; set; }
     }
+
 }
