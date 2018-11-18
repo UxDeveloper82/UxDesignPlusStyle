@@ -9,7 +9,7 @@ using UxDesign.API.Data;
 namespace UxDesign.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20181112153230_AddedUserExtensions")]
+    [Migration("20181117091324_AddedUserExtensions")]
     partial class AddedUserExtensions
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -48,6 +48,8 @@ namespace UxDesign.API.Migrations
                     b.Property<string>("Description");
 
                     b.Property<bool>("IsMain");
+
+                    b.Property<string>("PublicId");
 
                     b.Property<string>("Url");
 
@@ -97,7 +99,7 @@ namespace UxDesign.API.Migrations
 
                     b.Property<string>("Introduction");
 
-                    b.Property<string>("KnowAs");
+                    b.Property<string>("KnownAs");
 
                     b.Property<DateTime>("LastActive");
 
