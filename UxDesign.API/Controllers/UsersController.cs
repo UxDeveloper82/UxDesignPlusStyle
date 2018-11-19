@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UxDesign.API.Dtos;
+using UxDesign.API.Helpers;
 using AutoMapper;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -10,6 +11,7 @@ using System;
 
 namespace UxDesign.API.Controllers
 {
+    [ServiceFilter(typeof(LogUserActivity))]
     [Authorize]
     [Route ("api/[controller]")]
     [ApiController]
@@ -28,15 +30,19 @@ namespace UxDesign.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetUsers () 
         {
-            var users = await _repo.GetUsers ();
+            var users = await _repo.GetUsers();
+
             var usersToReturn = _mapper.Map<IEnumerable<UserForDetailedDto>>(users);
+
             return Ok (usersToReturn);
         }
 
-        [HttpGet ("{id}")]
-        public async Task<IActionResult> GetUser (int id)
+        [HttpGet ("{id}", Name="GetUser")]
+
+        public async Task<IActionResult> GetUser(int id)
         {
             var user = await _repo.GetUser (id);
+
             var userToReturn = _mapper.Map<UserForDetailedDto>(user);
 
             return Ok (userToReturn);
