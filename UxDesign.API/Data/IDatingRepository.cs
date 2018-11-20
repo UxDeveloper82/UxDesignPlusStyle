@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using UxDesign.API.Helpers;
 using UxDesign.API.Models;
 
 namespace UxDesign.API.Data
@@ -12,7 +13,7 @@ namespace UxDesign.API.Data
 
        Task<bool> SaveAll();
 
-       Task<IEnumerable<User>> GetUsers();
+       Task<PagedList<User>> GetUsers(UserParams userParams);
 
        Task<User> GetUser(int id);
 
