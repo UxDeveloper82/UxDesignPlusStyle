@@ -15,6 +15,7 @@ import { MyportfolioListComponent } from './myportfolio/myportfolio-list/myportf
 import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
+import { ListsResolver } from './_resolvers/lists.resolver';
 
 export const appRoutes: Routes = [
    { path: 'home', component: HomeComponent },
@@ -30,7 +31,7 @@ export const appRoutes: Routes = [
         { path: 'member/edit', component: MemberEditComponent,
             resolve: {user: MemberEditResolver}, canDeactivate: [PreventUnsavedChanges]},
         { path: 'messages', component: MessagesComponent },
-        { path: 'lists' , component: ListsComponent },
+        { path: 'lists' , component: ListsComponent,  resolve: {users: ListsResolver}},
         { path: 'portfolio', component: MyportfolioListComponent },
         { path: 'portfolio/:id', component: MyportfolioDetailComponent},
         { path: 'contact', component: ContactComponent },
