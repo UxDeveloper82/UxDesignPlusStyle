@@ -27,5 +27,14 @@ namespace UxDesign.API.Controllers
             return Ok(portfolio);
 
         }
+        
+        [AllowAnonymous]
+        [HttpGet("{id}")]
+        public IActionResult GetPort(int id)
+        {
+            var port = _context.Portfolios.SingleOrDefault(p =>p.Id == id);
+            return Ok(port);
+        }
+
     }
 }

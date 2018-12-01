@@ -1,3 +1,5 @@
+import { Portfolio } from './../../_models/portfolio';
+import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,21 +9,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./myportfolio-list.component.css']
 })
 export class MyportfolioListComponent implements OnInit {
-  portfolios: any;
+  portfolios: Portfolio[];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.getPortfolio();
+    this.route.data.subscribe(data => {
+       this.portfolios = data['portfolios'];
+    });
   }
-  getPortfolio() {
-    this.http.get('http://localhost:5000/api/portfolios')
-        .subscribe(response => {
-          this.portfolios = response;
-        }, error => {
-          console.log(error);
-        });
-  }
+  // getPortfolio() {
+  //   this.http.get('http://localhost:5000/api/portfolios')
+  //       .subscribe(response => {
+  //         this.portfolios = response;
+  //       }, error => {
+  //         console.log(error);
+  //       });
+  // }
 
 }
 

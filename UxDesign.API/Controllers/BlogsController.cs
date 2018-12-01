@@ -6,6 +6,7 @@ using UxDesign.API.Data;
 
 namespace UxDesign.API.Controllers 
 {
+    [AllowAnonymous]
     [Route ("api/[controller]")]
     [ApiController]
     public class BlogsController : ControllerBase 
@@ -18,7 +19,7 @@ namespace UxDesign.API.Controllers
 
         }
 
-         // GET api/Blogs
+         // GET api/blogs
         [AllowAnonymous]
         [HttpGet]
         public IActionResult GetBlogs() 
@@ -26,6 +27,17 @@ namespace UxDesign.API.Controllers
             var blogs = _context.Blogs.ToList();
 
             return Ok(blogs);
+        }
+
+        // GET api/values/5
+        [AllowAnonymous]
+        [HttpGet ("{id}")]
+        public IActionResult GetBlog(int id) 
+        {
+            var blog =_context.Blogs.FirstOrDefault(x =>x.Id == id);
+
+            return Ok(blog);
+
         }
     }
 }
