@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using UxDesign.API.Data;
+using UxDesign.API.Models;
 
 namespace UxDesign.API.Controllers 
 {
@@ -29,7 +30,7 @@ namespace UxDesign.API.Controllers
             return Ok(blogs);
         }
 
-        // GET api/values/5
+        // GET api/blogs/5
         [AllowAnonymous]
         [HttpGet ("{id}")]
         public IActionResult GetBlog(int id) 
@@ -39,5 +40,21 @@ namespace UxDesign.API.Controllers
             return Ok(blog);
 
         }
+
+        // POST api/blogs
+        [HttpPost]
+        public IActionResult CreateBlog ([FromBody] Blog blog) 
+        {
+           if(!ModelState.IsValid)
+           {
+               return BadRequest(ModelState);
+           }
+           _context.Blogs.Add(blog);
+           _context.SaveChanges();
+
+           return Ok();
+
+        }
+
     }
 }

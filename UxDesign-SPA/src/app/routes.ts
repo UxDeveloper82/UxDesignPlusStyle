@@ -22,6 +22,7 @@ import { BlogListComponent } from './myblog/blog-list/blog-list.component';
 import { BlogListResolver } from './_resolvers/blog-list.resolver';
 import { PortfolioListResolver } from './_resolvers/portfolio-list.resolver';
 import { PortfolioDetailResolver } from './_resolvers/portfolio-detail.resolver';
+import { BlogNewComponent } from './myblog/blog-new/blog-new.component';
 
 export const appRoutes: Routes = [
    { path: 'home', component: HomeComponent },
@@ -35,6 +36,7 @@ export const appRoutes: Routes = [
              resolve: {blog: BlogDetailResolver}},
     { path: 'contact', component: ContactComponent },
     { path: 'value' , component: ValueComponent },
+    { path: 'blog-new' , component: BlogNewComponent },
     {
       path: '',
       runGuardsAndResolvers: 'always',

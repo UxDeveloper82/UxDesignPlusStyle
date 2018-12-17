@@ -46,6 +46,7 @@ import { ListsResolver } from './_resolvers/lists.resolver';
 import { MessagesResolver } from './_resolvers/messages.resolver';
 import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
 import { BlogListComponent } from './myblog/blog-list/blog-list.component';
+import { BlogNewComponent } from './myblog/blog-new/blog-new.component';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -73,6 +74,7 @@ export function tokenGetter() {
       MemberMessagesComponent,
       BlogListComponent,
       BlogDetailComponent,
+      BlogNewComponent
    ],
    imports: [
       BrowserModule,

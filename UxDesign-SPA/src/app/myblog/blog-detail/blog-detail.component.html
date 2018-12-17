@@ -1,13 +1,13 @@
-<div class="container">
-                  <img class="img-responsive" src="assets/images/{{blog.image}}.png" alt="Card image cap">
-                  <div class="card-body">
-                        <h2 class="card-title">{{blog.title}}</h2>
-                        <p class="card-text">{{blog.post}}</p>
-                        <a [routerLink]="['/blog']" class="btn btn-primary">&larr;Go Back</a>
-                  </div>
-                  <div class="card-footer text-muted">
-                      Posted on {{blog.created}} by
-                      <a href="#">{{blog.author}}</a>
-                  </div>
+<div class="container mt-5">
+        <h2 class="card-title">{{blog.title}}</h2>
+        <img class="img-responsive" src="assets/images/{{blog.image}}.png" alt="Card image cap">
+        <div class="card-body">
+            <p class="card-text">{{blog.post}}</p>
+            <a [routerLink]="['/blog']" class="btn btn-primary">&larr;Go Back</a>
+        </div>
+        <div class="card-footer text-muted">
+                Posted on {{blog.created | date: 'mediumDate'}} by
+                <a href="#">{{blog.author}}</a>
+        </div>
 </div>
 

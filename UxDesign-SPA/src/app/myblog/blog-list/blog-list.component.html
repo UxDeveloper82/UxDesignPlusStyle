@@ -4,26 +4,28 @@
             <h1 class="card-my-4">Best Web Development & Programming 
               <br><small>Blogs for 2017</small>
             </h1>
-              <div class="card mb-4" *ngFor="let blog of blogs">
+            <br>
+            <div class="card mb-4" *ngFor="let blog of blogs">
+                  <h2 class="card-title">{{blog.title}}</h2>
                   <img class="img-responsive" src="assets/images/{{blog.image}}.png" alt="Card image cap">
                   <div class="card-body">
-                        <h2 class="card-title">{{blog.title}}</h2>
                         <p class="card-text">{{blog.post}}</p>
                         <a [routerLink]="['/blog/', blog.id]" class="btn btn-primary">Read More &rarr;</a>
+                        <a [routerLink]="['/blog-new/']" class="btn btn-primary">Read More &rarr;</a>
                   </div>
                   <div class="card-footer text-muted">
-                      Posted on {{blog.created}} by
+                      Posted on {{blog.created | date: 'mediumDate' }} by
                       <a href="#">{{blog.author}}</a>
                   </div>
-              </div>    
-          <ul class="pagination justify-content-center mb-4">
-              <li class="page-item">
-                <a class="page-link" href="#">&larr; Older</a>
-              </li>
-              <li class="page-item disabled">
-                <a class="page-link" href="#">Newer &rarr;</a>
-              </li>
-          </ul>
+            </div>    
+            <ul class="pagination justify-content-center mb-4">
+                <li class="page-item">
+                  <a class="page-link" href="#">&larr; Older</a>
+                </li>
+                <li class="page-item disabled">
+                  <a class="page-link" href="#">Newer &rarr;</a>
+                </li>
+            </ul>
 
         </div>
 

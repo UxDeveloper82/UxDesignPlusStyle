@@ -153,7 +153,7 @@ namespace UxDesign.API.Controllers
                 _repo.Delete(photoFromRepo);
             }
 
-            if (await _repo.SaveAll());
+            if (await _repo.SaveAll())
                 return Ok();
 
              return BadRequest("Failed to delete the photo");   
