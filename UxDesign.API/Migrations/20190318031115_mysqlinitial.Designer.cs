@@ -9,15 +9,14 @@ using UxDesign.API.Data;
 namespace UxDesign.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20181215181019_mysqlinitial")]
+    [Migration("20190318031115_mysqlinitial")]
     partial class mysqlinitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
+                .HasAnnotation("ProductVersion", "2.1.8-servicing-32085");
 
             modelBuilder.Entity("UxDesign.API.Models.Blog", b =>
                 {

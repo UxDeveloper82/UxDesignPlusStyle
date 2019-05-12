@@ -15,11 +15,11 @@
           "dir": "/var/uxdesignapp",
           "mappings": [
               {
-                  "source": "/Uxdesign.API/bin/Debug/netcoreapp2.2/publish",
+                  "source": "/Uxdesign.API/bin/Debug/netcoreapp2.1/publish",
                   "target": "/"
               }
           ],
-          "host": "68.183.129.121",
+          "host": "192.34.58.247",
           "port": 22,
           "user": "root", "password": "peru1982",
           "checkBeforeDeploy": true

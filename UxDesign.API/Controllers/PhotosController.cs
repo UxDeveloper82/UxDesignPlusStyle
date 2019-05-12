@@ -100,6 +100,7 @@ namespace UxDesign.API.Controllers
         {
             if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
                return Unauthorized();
+               
             var user = await _repo.GetUser(userId);
 
             if (!user.Photos.Any(p =>p.Id == id))
